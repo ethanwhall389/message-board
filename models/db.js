@@ -1,41 +1,44 @@
+const {format} = require('date-fns')
+
 const messages = [
     {
-        text: 'Hi there!',
-        userId: 1,
-        added: new Date()
-    },
-    {
-        text: 'Hello world!',
-        userId: 2,
-        added: new Date()
-    },
-]
-
-const users = [
-    {
         id: 1,
-        firstName: 'Amando',
-        lastName: 'Jebinski',
+        text: 'Hi there!',
+        user: 'Amando',
+        added: new Date()
     },
     {
         id: 2,
-        firstName: 'Charles',
-        lastName: 'Swarth',
-    }
+        text: 'Hello world!',
+        user: 'Charles',
+        added: new Date()
+    },
 ]
 
 function getAllMessages() {
-    return messages.map((message) => {
-        const user = users.find((user) => user.id === message.userId);
-        return {
-            text: message.text,
-            userFirstName: user.firstName,
-            userLastName: user.lastName,
-            added: message.added,
-        }
-    });
+    return messages;
 }
 
-function getMessagesByUser(userId) {
-    return messages.filter((message) => message.userId === userId);
+function getMessageById(id) {
+    console.log('running get message by id:')
+    const message = messages.find((message) => {
+        console.log(`message id: ${message.id}`)
+        console.log(`queried id: ${id}`)
+        if (message.id === id) {
+            return message;
+        }   
+    });
+    console.log(message);
+    return message;
+}
+
+function addNewMessage(user, message) {
+    const lastMessageId = messages[messages.length-1].id;
+    messages.push({id: lastMessageId+1, text: message, user: user, added: new Date()});
+}
+
+module.exports = {
+    getAllMessages,
+    getMessageById,
+    addNewMessage,
 }

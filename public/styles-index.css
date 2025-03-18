@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body>div {
+    width: 100%;
+}
+
+.message-cont {
+    background-color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all;
+    transition-duration: 100ms;
+}
+
+.message-cont:hover {
+    cursor: pointer;
+    background-color: rgb(249, 253, 255);
+}
+
+.all-messages-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+.date {
+    margin-top: 10px;
+    color: rgb(109, 109, 109);
+}

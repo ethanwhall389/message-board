@@ -1,0 +1,5 @@
+<ul class="all-messages-cont">
+    <% messages.forEach((message) => { %>
+        <%- include('message', {message: message}) %>
+    <% }); %>
+</ul>

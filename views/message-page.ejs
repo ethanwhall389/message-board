@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Mini Message Board</title>
+        <link rel="stylesheet" href="/styles-master.css">
+        <link rel="stylesheet" href="/styles-message.css">
+    </head>
+    <body>
+        <div class="message-cont">
+            <div>
+                <h2>User:</h2>
+                <p><%= message.user %></p>
+            </div>
+            <div>
+                <h2>Message:</h2>
+                <p><%= message.text %></p>
+            </div>
+            <div>
+                <h2>Date and time:</h2>
+                <p class="date"><%= message.added %></p>
+            </div>
+        </div> 
+    </body>
+</html>

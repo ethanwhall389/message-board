@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Mini Message Board</title>
+        <link rel="stylesheet" href="/styles-master.css">
+        <link rel="stylesheet" href="/styles-form.css">
+    </head>
+    <body>
+        <h2>Post a new message!</h2>
+        <form method="POST" action="/new">
+            <ul class="form-inputs">
+                <li>
+                    <label for="name">Your name</label>
+                    <input name="user" id="name" type="text" required>
+                </li>
+                <li>
+                    <label for="message">Your message</label>
+                    <textarea name="message" id="message" required></textarea>
+                </li>
+                <button type="submit">Add message</button>
+            </ul>
+        </form>
+    </body>
+</html>
