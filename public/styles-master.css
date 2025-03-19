@@ -37,7 +37,7 @@ body {
 
 button {
     border: none;
-    background-color: rgb(184, 223, 245);
+    background-color: rgb(142, 246, 147);
     padding: 8px;
     min-width: 150px;
     max-width: 200px;
@@ -48,5 +48,5 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: rgb(203, 230, 246);
+    background-color: rgb(166, 246, 170);
 }

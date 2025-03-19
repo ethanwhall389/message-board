@@ -20,15 +20,11 @@ function getAllMessages() {
 }
 
 function getMessageById(id) {
-    console.log('running get message by id:')
     const message = messages.find((message) => {
-        console.log(`message id: ${message.id}`)
-        console.log(`queried id: ${id}`)
         if (message.id === id) {
             return message;
         }   
     });
-    console.log(message);
     return message;
 }
 
