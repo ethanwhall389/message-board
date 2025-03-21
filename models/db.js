@@ -16,6 +16,7 @@ const messages = [
 ]
 
 function getAllMessages() {
+    console.log(messages);
     return messages;
 }
 
