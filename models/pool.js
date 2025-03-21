@@ -1,6 +1,8 @@
 const { Pool } = require("pg");
 require("dotenv").config();
 
+console.log("All env variables: ", process.env);
+
 console.log("Database connection settings:", {
   connectionString: process.env.DATABASE_URL,
 });
